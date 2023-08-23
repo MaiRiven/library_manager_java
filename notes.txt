@@ -1,0 +1,79 @@
+Problem or Need:
+    To view a person's digital library.
+    To track reading progress and ratings.
+
+
+
+
+
+Main Features:
+
+Show Full Library as List:
+    Display the entire library of books in a list format.
+    List will be formatted and sorted alphabetically by author surname.
+    Include relevant details, title, author, genre, status, and reading progress.
+
+Search Library for Specific Author or Title:
+    Implement a search functionality that allows users to search for books by author or title.
+    Be considerate of case-insensitive searching for better user experience.
+    Display search results clearly and provide a way to navigate back to the main list.
+
+Search and Update Status of Books:
+    Allow users to search for books by their status (unread, reading, read).
+    Provide the ability to update the status of a book based on user input.
+    Ensure that the updated status is reflected in the book list.
+
+Update Percentage of Read for Specific Book:
+    Allow users to update the reading progress for a specific book.
+    Update the reading progress value in the book details.
+
+Leave a Star Rating:
+    Allow users to leave a star rating for a book.
+    Store and display the rating for each book.
+
+
+
+
+
+User Stories:
+    View Library List
+        As a user, I want to see a list of all the books in my library, including their titles, authors, genres, and status.
+    
+    Search for Books
+        As a user, I want to search my library for books by entering keywords like author names or book titles. I expect to see matching results.
+    
+    Update Book Status
+        As a user, I want to change the status of a book to "unread," "reading," or "read" after I've interacted with it. I want the status change to be reflected in the library list.
+
+    Update Reading progress
+        As a user, I want to update the reading progress of a specific book by entering a percentage. I expect the progress to be accurately updated.
+
+    Leave a Star Rating
+        As a user, I want to leave a star rating (out of 5 stars) for a book to indicate how much I liked it. I expect the rating to be displayed next to the book.
+
+    View Specific Book Details
+        As a user, I want to view detailed information about a specific book, including its title, author, genre, status, reading progress, and star rating.
+
+    Navigate Back to Library
+        As a user, I want an easy way to navigate back to the main library list after viewing specific book details or search results.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Sort and Filter Library (not mvp)
+        As a user, I want to sort and filter the library list by different criteria, such as title, author, genre, and status, to find books more easily.
+
+    Add New Books (not mvp)
+        As a user, I want to add new books to my library by providing their title, author, genre, and other details. I expect the new book to be included in the library list.
+
+    Delete Books (not mvp)
+        As a user, I want to remove books from my library when I no longer need them. I expect the deleted book to be removed from the library list.
+
+
+
+Data Storage:
+    Test data within a JSON file in the project directory
+
+
+
+
+Future Growth:
+    Simple web page with some images and buttons
+    Implement search and buy options: use google or gutenberg or open library api
