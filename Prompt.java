@@ -28,4 +28,9 @@ public class Prompt {
         System.out.println("Prompts class is working!");
     }
 
+    public String getStringInput() {
+        // System.out.println("Enter: ");
+        return scanner.nextLine();
+    }
+
 }
