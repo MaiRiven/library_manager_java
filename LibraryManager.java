@@ -16,7 +16,6 @@ public class LibraryManager {
     public void displayLibrary() {
         List<Book> library = dataManager.getLibrary(); // Get the library data from DataManager
         art.bookLineArtTwo();
-        System.out.println("HEERRRREEE !!!!!!!!!!!!!!!!!!!!!!!******************");
         System.out.printf("| %-40s | %-25s | %-10s | %-4s |\n",
                 "Title", "Author", "Rating", "Status", "Progress");
 
@@ -29,31 +28,72 @@ public class LibraryManager {
 
     public void searchBooks(String searchString) {
 
-        List<Book> results = new ArrayList<>();
-
-        List<Book> titleResults = dataManager.searchBooksByTitle(searchString);
-        results.addAll(titleResults);
-
-        List<Book> authorResults = dataManager.searchBooksByAuthor(searchString);
-        results.addAll(authorResults);
+        List<Book> results = dataManager.searchBooks(searchString);
 
         if (results.isEmpty()) {
             System.out.println("No matches found. Go buy more books.");
         } else {
             art.bookLineArt();
             System.out.printf("| %-40s | %-25s | %-10s | %-10s |\n",
-                    "Title", "Author", "Rating", "Status");
+                    "Title", "Author", "Rating", "Status", "Progress");
             for (Book book : results) {
-                System.out.printf("| %-40s | %-25s | %-10s | %-10s |\n",
+                System.out.printf("| %-40s | %-25s | %-10s | %-10s | %-10s\n",
                         book.getTitle(), book.getAuthor(),
                         book.getRating(), book.getStatus());
             }
         }
-        art.openBookArt();
     }
 
     public void updateBookStatus() {
-        System.out.println("update book status func placeholder");
+        displayLibrary();
+        System.out.println("Enter the title of the book you want to update: ");
+        String title = prompt.getStringInput();
+
+        Book bookToUpdate = findBookByTitle(title);
+        if (bookToUpdate != null) {
+            System.out.println("Is this the book you want to update?");
+            System.out.println("Title: " + bookToUpdate.getTitle());
+            System.out.println("Author: " + bookToUpdate.getAuthor());
+            System.out.print("Type 'yes' to update, 'no' to cancel: ");
+            String confirmation = prompt.getStringInput();
+
+            if (confirmation.equalsIgnoreCase("yes")) {
+                System.out.println("Select the new reading status:");
+                System.out.println("1. Unread");
+                System.out.println("2. Reading");
+                System.out.println("3. Finished");
+                int statusChoice = prompt.getIntInput();
+
+                String newStatus = "";
+                switch (statusChoice) {
+                    case 1:
+                        newStatus = "unread";
+                        break;
+                    case 2:
+                        newStatus = "reading";
+                        break;
+                    case 3:
+                        newStatus = "finished";
+                        bookToUpdate.setReadingProgress("100%");
+                        break;
+                    default:
+                        System.out.println("Invalid choice.");
+                        return;
+                }
+                dataManager.updateBookStatus(bookToUpdate, newStatus);
+                System.out.println("Reading status updated!");
+                System.out.printf("| %-40s | %-25s | %-10s | %-8s | %-4s |\n",
+                        "Title", "Author", "Rating", "Status", "Progress");
+                System.out.printf("| %-40s | %-25s | %-10s | %-8s | %-4s |\n",
+                        bookToUpdate.getTitle(), bookToUpdate.getAuthor(),
+                        bookToUpdate.getRating(), bookToUpdate.getStatus(), bookToUpdate.getReadingProgress());
+
+            } else {
+                System.out.println("Update cancelled");
+            }
+        } else {
+            System.out.println("Book not found/");
+        }
     }
 
     public void updateReadingProgress() {
