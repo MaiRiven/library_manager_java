@@ -20,7 +20,7 @@ public class Prompt {
     }
 
     public int getIntInput() {
-        System.out.print("Enter your choice: "); // prompt for input
+        System.out.print(": "); // prompt for input
         return scanner.nextInt(); // read and return integer input
     }
 

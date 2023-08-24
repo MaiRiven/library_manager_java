@@ -7,6 +7,7 @@ public class Book {
     private String status;
     private String rating;
     private String readingProgress;
+    private int pageCount;
 
     // constructor to initialise the Book object
     public Book(String title, String author, String genre, String status, String rating, String readingProgress) {
@@ -46,6 +47,10 @@ public class Book {
         return readingProgress;
     }
 
+    public int getPageCount() {
+        return pageCount;
+    }
+
     // Setters
     public void setTitle(String title) {
         this.title = title;
@@ -69,6 +74,10 @@ public class Book {
 
     public void setReadingProgress(String readingProgress) {
         this.readingProgress = readingProgress;
+    }
+
+    public void setPageCount(int pageCount) {
+        this.pageCount = pageCount;
     }
 
     // formatted string representation of a Book

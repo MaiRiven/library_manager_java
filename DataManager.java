@@ -75,9 +75,21 @@ public class DataManager {
     // search books with title or author
     public List<Book> searchBooks(String searchString) {
         List<Book> results = new ArrayList<>();
+
         for (Book book : library) {
             if (book.getTitle().toLowerCase().contains(searchString.toLowerCase())
                     || book.getAuthor().toLowerCase().contains(searchString.toLowerCase())) {
+                results.add(book);
+            }
+        }
+        return results;
+    }
+
+    public List<Book> searchBooksByTitle(String title) {
+        List<Book> results = new ArrayList<>();
+
+        for (Book book : library) {
+            if (book.getTitle().toLowerCase().contains(title.toLowerCase())) {
                 results.add(book);
             }
         }

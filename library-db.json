@@ -1,1 +1,191 @@
-[{"author":"J.D. Salinger","genre":"Fiction","readingProgress":"0%","title":"The Catcher in the Rye","starRating":"☆☆☆☆☆","status":"unread"},{"author":"Harper Lee","genre":"Fiction","readingProgress":"0%","title":"To Kill a Mockingbird","starRating":"☆☆☆☆☆","status":"unread"},{"author":"George Orwell","genre":"Science Fiction","readingProgress":"0%","title":"1984","starRating":"☆☆☆☆☆","status":"unread"},{"author":"F. Scott Fitzgerald","genre":"Fiction","readingProgress":"0%","title":"The Great Gatsby","starRating":"☆☆☆☆☆","status":"unread"},{"author":"Jane Austen","genre":"Romance","readingProgress":"0%","title":"Pride and Prejudice","starRating":"☆☆☆☆☆","status":"unread"},{"author":"J.K. Rowling","genre":"Fantasy","readingProgress":"0%","title":"Harry Potter and the Philosopher's Stone","starRating":"☆☆☆☆☆","status":"unread"},{"author":"J.K. Rowling","genre":"Fantasy","readingProgress":"0%","title":"Harry Potter and the Chamber of Secrets","starRating":"☆☆☆☆☆","status":"unread"},{"author":"J.K. Rowling","genre":"Fantasy","readingProgress":"0%","title":"Harry Potter and the Prisoner of Azkaban","starRating":"☆☆☆☆☆","status":"unread"},{"author":"J.R.R. Tolkien","genre":"Fantasy","readingProgress":"0%","title":"The Hobbit","starRating":"☆☆☆☆☆","status":"unread"},{"author":"J.R.R. Tolkien","genre":"Fantasy","readingProgress":"0%","title":"The Fellowship of the Ring","starRating":"☆☆☆☆☆","status":"unread"},{"author":"J.R.R. Tolkien","genre":"Fantasy","readingProgress":"0%","title":"The Two Towers","starRating":"☆☆☆☆☆","status":"unread"},{"author":"J.R.R. Tolkien","genre":"Fantasy","readingProgress":"0%","title":"The Return of the King","starRating":"☆☆☆☆☆","status":"unread"},{"author":"Herman Melville","genre":"Adventure","readingProgress":"0%","title":"Moby-Dick","starRating":"☆☆☆☆☆","status":"unread"},{"author":"William Shakespeare","genre":"Drama","readingProgress":"0%","title":"Romeo and Juliet","starRating":"☆☆☆☆☆","status":"unread"},{"author":"William Shakespeare","genre":"Tragedy","readingProgress":"0%","title":"Hamlet","starRating":"☆☆☆☆☆","status":"unread"},{"author":"Jane Austen","genre":"Romance","readingProgress":"0%","title":"Sense and Sensibility","starRating":"☆☆☆☆☆","status":"unread"},{"author":"Jane Austen","genre":"Romance","readingProgress":"0%","title":"Emma","starRating":"☆☆☆☆☆","status":"unread"},{"author":"Paulo Coelho","genre":"Fiction","readingProgress":"0%","title":"The Alchemist","starRating":"☆☆☆☆☆","status":"unread"},{"author":"Dan Brown","genre":"Mystery","readingProgress":"0%","title":"The Da Vinci Code","starRating":"☆☆☆☆☆","status":"unread"},{"author":"Gillian Flynn","genre":"Thriller","readingProgress":"100%","title":"Gone Girl","starRating":"☆☆☆☆☆","status":"finished"},{"author":"Suzanne Collins","genre":"Science Fiction","readingProgress":"0%","title":"The Hunger Games","starRating":"☆☆☆☆☆","status":"unread"}]
+[
+  {
+    "author": "J.D. Salinger",
+    "genre": "Fiction",
+    "readingProgress": "0%",
+    "title": "The Catcher in the Rye",
+    "starRating": "☆☆☆☆☆",
+    "status": "unread",
+    "pageCount": 500
+  },
+  {
+    "author": "Harper Lee",
+    "genre": "Fiction",
+    "readingProgress": "0%",
+    "title": "To Kill a Mockingbird",
+    "starRating": "☆☆☆☆☆",
+    "status": "unread",
+    "pageCount": 500
+  },
+  {
+    "author": "George Orwell",
+    "genre": "Science Fiction",
+    "readingProgress": "0%",
+    "title": "1984",
+    "starRating": "☆☆☆☆☆",
+    "status": "unread",
+    "pageCount": 500
+  },
+  {
+    "author": "F. Scott Fitzgerald",
+    "genre": "Fiction",
+    "readingProgress": "0%",
+    "title": "The Great Gatsby",
+    "starRating": "☆☆☆☆☆",
+    "status": "unread",
+    "pageCount": 500
+  },
+  {
+    "author": "Jane Austen",
+    "genre": "Romance",
+    "readingProgress": "0%",
+    "title": "Pride and Prejudice",
+    "starRating": "☆☆☆☆☆",
+    "status": "unread",
+    "pageCount": 500
+  },
+  {
+    "author": "J.K. Rowling",
+    "genre": "Fantasy",
+    "readingProgress": "0%",
+    "title": "Harry Potter and the Philosopher's Stone",
+    "starRating": "☆☆☆☆☆",
+    "status": "unread",
+    "pageCount": 500
+  },
+  {
+    "author": "J.K. Rowling",
+    "genre": "Fantasy",
+    "readingProgress": "0%",
+    "title": "Harry Potter and the Chamber of Secrets",
+    "starRating": "☆☆☆☆☆",
+    "status": "unread",
+    "pageCount": 500
+  },
+  {
+    "author": "J.K. Rowling",
+    "genre": "Fantasy",
+    "readingProgress": "0%",
+    "title": "Harry Potter and the Prisoner of Azkaban",
+    "starRating": "☆☆☆☆☆",
+    "status": "unread",
+    "pageCount": 500
+  },
+  {
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "readingProgress": "0%",
+    "title": "The Hobbit",
+    "starRating": "☆☆☆☆☆",
+    "status": "reading",
+    "pageCount": 500
+  },
+  {
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "readingProgress": "0%",
+    "title": "The Fellowship of the Ring",
+    "starRating": "☆☆☆☆☆",
+    "status": "unread",
+    "pageCount": 500
+  },
+  {
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "readingProgress": "0%",
+    "title": "The Two Towers",
+    "starRating": "☆☆☆☆☆",
+    "status": "unread",
+    "pageCount": 500
+  },
+  {
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "readingProgress": "0%",
+    "title": "The Return of the King",
+    "starRating": "☆☆☆☆☆",
+    "status": "unread",
+    "pageCount": 500
+  },
+  {
+    "author": "Herman Melville",
+    "genre": "Adventure",
+    "readingProgress": "0%",
+    "title": "Moby-Dick",
+    "starRating": "☆☆☆☆☆",
+    "status": "unread",
+    "pageCount": 500
+  },
+  {
+    "author": "William Shakespeare",
+    "genre": "Drama",
+    "readingProgress": "0%",
+    "title": "Romeo and Juliet",
+    "starRating": "☆☆☆☆☆",
+    "status": "unread",
+    "pageCount": 500
+  },
+  {
+    "author": "William Shakespeare",
+    "genre": "Tragedy",
+    "readingProgress": "0%",
+    "title": "Hamlet",
+    "starRating": "☆☆☆☆☆",
+    "status": "unread",
+    "pageCount": 500
+  },
+  {
+    "author": "Jane Austen",
+    "genre": "Romance",
+    "readingProgress": "0%",
+    "title": "Sense and Sensibility",
+    "starRating": "☆☆☆☆☆",
+    "status": "unread",
+    "pageCount": 500
+  },
+  {
+    "author": "Jane Austen",
+    "genre": "Romance",
+    "readingProgress": "0%",
+    "title": "Emma",
+    "starRating": "☆☆☆☆☆",
+    "status": "unread",
+    "pageCount": 500
+  },
+  {
+    "author": "Paulo Coelho",
+    "genre": "Fiction",
+    "readingProgress": "0%",
+    "title": "The Alchemist",
+    "starRating": "☆☆☆☆☆",
+    "status": "unread",
+    "pageCount": 500
+  },
+  {
+    "author": "Dan Brown",
+    "genre": "Mystery",
+    "readingProgress": "0%",
+    "title": "The Da Vinci Code",
+    "starRating": "☆☆☆☆☆",
+    "status": "unread",
+    "pageCount": 500
+  },
+  {
+    "author": "Gillian Flynn",
+    "genre": "Thriller",
+    "readingProgress": "100%",
+    "title": "Gone Girl",
+    "starRating": "☆☆☆☆☆",
+    "status": "finished",
+    "pageCount": 500
+  },
+  {
+    "author": "Suzanne Collins",
+    "genre": "Science Fiction",
+    "readingProgress": "0%",
+    "title": "The Hunger Games",
+    "starRating": "☆☆☆☆☆",
+    "status": "unread",
+    "pageCount": 500
+  }
+]
