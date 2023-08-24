@@ -54,6 +54,24 @@
       "status": "unread"
     },
     {
+      "title": "Harry Potter and the Chamber of Secrets",
+      "author": "J.K. Rowling",
+      "genre": "Fantasy",
+      "pageCount": 341,
+      "starRating": "☆☆☆☆☆",
+      "readingProgress": "0%",
+      "status": "unread"
+    },
+    {
+      "title": "Harry Potter and the Prisoner of Azkaban",
+      "author": "J.K. Rowling",
+      "genre": "Fantasy",
+      "pageCount": 435,
+      "starRating": "☆☆☆☆☆",
+      "readingProgress": "0%",
+      "status": "unread"
+    },
+    {
       "title": "The Hobbit",
       "author": "J.R.R. Tolkien",
       "genre": "Fantasy",
@@ -63,7 +81,16 @@
       "status": "unread"
     },
     {
-        "title": "The Lord of the Rings: The Two Towers",
+      "title": "The Fellowship of the Ring",
+      "author": "J.R.R. Tolkien",
+      "genre": "Fantasy",
+      "pageCount": 432,
+      "starRating": "☆☆☆☆☆",
+      "readingProgress": "0%",
+      "status": "unread"
+    },
+    {
+        "title": "The Two Towers",
         "author": "J.R.R. Tolkien",
         "genre": "Fantasy",
         "pageCount": 352,
@@ -72,7 +99,7 @@
         "status": "unread"
       },
       {
-        "title": "The Lord of the Rings: The Return of the King",
+        "title": "The Return of the King",
         "author": "J.R.R. Tolkien",
         "genre": "Fantasy",
         "pageCount": 416,
@@ -85,15 +112,6 @@
       "author": "Herman Melville",
       "genre": "Adventure",
       "pageCount": 585,
-      "starRating": "☆☆☆☆☆",
-      "readingProgress": "0%",
-      "status": "unread"
-    },
-    {
-      "title": "The Lord of the Rings: The Fellowship of the Ring",
-      "author": "J.R.R. Tolkien",
-      "genre": "Fantasy",
-      "pageCount": 432,
       "starRating": "☆☆☆☆☆",
       "readingProgress": "0%",
       "status": "unread"
@@ -112,24 +130,6 @@
         "author": "William Shakespeare",
         "genre": "Tragedy",
         "pageCount": 342,
-        "starRating": "☆☆☆☆☆",
-        "readingProgress": "0%",
-        "status": "unread"
-      },
-      {
-        "title": "Harry Potter and the Chamber of Secrets",
-        "author": "J.K. Rowling",
-        "genre": "Fantasy",
-        "pageCount": 341,
-        "starRating": "☆☆☆☆☆",
-        "readingProgress": "0%",
-        "status": "unread"
-      },
-      {
-        "title": "Harry Potter and the Prisoner of Azkaban",
-        "author": "J.K. Rowling",
-        "genre": "Fantasy",
-        "pageCount": 435,
         "starRating": "☆☆☆☆☆",
         "readingProgress": "0%",
         "status": "unread"
