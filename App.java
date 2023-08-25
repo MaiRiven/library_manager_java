@@ -44,7 +44,7 @@ public class App {
                     System.out.println("That wasn't an option silly.");
             }
         }
-        System.out.println("Goodbye...\n");
         art.closedBookArt();
+        System.out.println("Goodbye...\n");
     }
 }

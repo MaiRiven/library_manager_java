@@ -59,8 +59,9 @@ public class DataManager {
                 jsonObject.put("author", book.getAuthor());
                 jsonObject.put("genre", book.getGenre());
                 jsonObject.put("status", book.getStatus());
-                jsonObject.put("starRating", book.getRating());
+                jsonObject.put("starRating", book.getStarRating());
                 jsonObject.put("readingProgress", book.getReadingProgress());
+                jsonObject.put("pageCount", book.getPageCount());
                 jsonArray.add(jsonObject);
             }
             // write the json array into the file
@@ -75,6 +76,7 @@ public class DataManager {
     // search books with title or author
     public List<Book> searchBooks(String searchString) {
         List<Book> results = new ArrayList<>();
+
         for (Book book : library) {
             if (book.getTitle().toLowerCase().contains(searchString.toLowerCase())
                     || book.getAuthor().toLowerCase().contains(searchString.toLowerCase())) {
@@ -82,6 +84,15 @@ public class DataManager {
             }
         }
         return results;
+    }
+
+    public Book searchBooksByTitle(String title) {
+        for (Book book : library) {
+            if (book.getTitle().toLowerCase().contains(title.toLowerCase())) {
+                return book;
+            }
+        }
+        return null;
     }
 
     // update the status of a book
@@ -97,8 +108,8 @@ public class DataManager {
     }
 
     // leave a star rating for a book
-    public void leaveStarRating(Book book, String rating) {
-        book.setRating(rating);
+    public void leaveStarRating(Book book, String starRating) {
+        book.setStarRating(starRating);
         saveLibraryData();
     }
 }
