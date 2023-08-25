@@ -22,10 +22,11 @@ public class LibraryManager {
         for (Book book : library) {
             System.out.printf("| %-40s | %-25s | %-12s | %-10s | %-4s |\n",
                     book.getTitle(), book.getAuthor(),
-                    book.getRating(), book.getStatus(), book.getReadingProgress());
+                    book.getStarRating(), book.getStatus(), book.getReadingProgress());
         }
     }
 
+    // add logic for multiple matches
     public void searchBooks(String searchString) {
 
         List<Book> results = dataManager.searchBooks(searchString);
@@ -39,7 +40,7 @@ public class LibraryManager {
             for (Book book : results) {
                 System.out.printf("| %-40s | %-25s | %-12s | %-10s | %-4s |\n",
                         book.getTitle(), book.getAuthor(),
-                        book.getRating(), book.getStatus(), book.getStatus());
+                        book.getStarRating(), book.getStatus(), book.getStatus());
             }
         }
     }
@@ -125,7 +126,36 @@ public class LibraryManager {
     }
 
     public void leaveStarRating() {
-        System.out.println("leave star rating func placeholder");
+        displayLibrary();
+        System.out.println("Enter the title of the book you want to rate: ");
+        String title = prompt.getStringInput();
+
+        Book bookToUpdate = dataManager.searchBooksByTitle(title);
+        if (bookToUpdate != null) {
+            System.out.println("Is this the book you want to rate?");
+            displayBookDetails(bookToUpdate);
+            System.out.print("Type 'yes' to rate, 'no' to cancel: ");
+            String confirmation = prompt.getStringInput();
+
+            if (confirmation.equalsIgnoreCase("yes")) {
+                System.out.println("Select the star rating (1-5): ");
+                int rating = prompt.getIntInput();
+
+                if (rating >= 1 && rating <= 5) {
+                    String starRating = getStarRatingString(rating); // Implement this method
+
+                    dataManager.leaveStarRating(bookToUpdate, starRating);
+                    System.out.println("Star rating updated!");
+                    displayBookDetails(bookToUpdate);
+                } else {
+                    System.out.println("Invalid rating choice.");
+                }
+            } else {
+                System.out.println("Rating update cancelled.");
+            }
+        } else {
+            System.out.println("Book not found.");
+        }
     }
 
     private Book findBookByTitle(String title) {
@@ -144,8 +174,19 @@ public class LibraryManager {
                 "Title", "Author", "Rating", "Status", "Progress");
         System.out.printf("| %-40s | %-25s | %-12s | %-10s | %-4s |\n",
                 book.getTitle(), book.getAuthor(),
-                book.getRating(), book.getStatus(), book.getReadingProgress());
+                book.getStarRating(), book.getStatus(), book.getReadingProgress());
 
+    }
+
+    private String getStarRatingString(int rating) {
+        StringBuilder starRatingBuilder = new StringBuilder();
+        for (int i = 0; i < rating; i++) {
+            starRatingBuilder.append("★");
+        }
+        for (int i = rating; i < 5; i++) {
+            starRatingBuilder.append("☆");
+        }
+        return starRatingBuilder.toString();
     }
 
 }

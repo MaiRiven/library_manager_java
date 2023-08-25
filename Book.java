@@ -5,17 +5,17 @@ public class Book {
     private String author;
     private String genre;
     private String status;
-    private String rating;
+    private String starRating;
     private String readingProgress;
     private int pageCount;
 
     // constructor to initialise the Book object
-    public Book(String title, String author, String genre, String status, String rating, String readingProgress) {
+    public Book(String title, String author, String genre, String status, String starRating, String readingProgress) {
         this.title = title;
         this.author = author;
         this.genre = genre;
         this.status = status;
-        this.rating = rating;
+        this.starRating = starRating;
         this.readingProgress = readingProgress;
     }
 
@@ -39,8 +39,8 @@ public class Book {
         return status;
     }
 
-    public String getRating() {
-        return rating;
+    public String getStarRating() {
+        return starRating;
     }
 
     public String getReadingProgress() {
@@ -68,8 +68,8 @@ public class Book {
         this.status = status;
     }
 
-    public void setRating(String rating) {
-        this.rating = rating;
+    public void setStarRating(String starRating) {
+        this.starRating = starRating;
     }
 
     public void setReadingProgress(String readingProgress) {
@@ -84,6 +84,6 @@ public class Book {
     @Override
     public String toString() {
         return String.format("%-30s | %-25s | %-10s | %-6s | %-6s | %-10s",
-                title, author, genre, status, rating, readingProgress);
+                title, author, genre, status, starRating, readingProgress);
     }
 }

@@ -76,4 +76,4 @@ Data Storage:
 
 Future Growth:
     Simple web page with some images and buttons
-    Implement search and buy options: use google or gutenberg or open library api
+    Implement search and buy options: use google books api or gutenberg books api or open library api

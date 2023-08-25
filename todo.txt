@@ -1,0 +1,13 @@
+bug:
+When updating reading progress of a book >
+    all json object pageCount in the db is set to 0
+    edited book is set to Infinity%
+
+When searching for a specific book which yields multiple matches
+    program breaks and ends <3
+
+
+todo:
+    create switch statement for star ratings
+        add to Book class?
+        create own class?
