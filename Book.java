@@ -10,13 +10,15 @@ public class Book {
     private int pageCount;
 
     // constructor to initialise the Book object
-    public Book(String title, String author, String genre, String status, String starRating, String readingProgress) {
+    public Book(String title, String author, String genre, String status, String starRating, String readingProgress,
+            int pageCount) {
         this.title = title;
         this.author = author;
         this.genre = genre;
         this.status = status;
         this.starRating = starRating;
         this.readingProgress = readingProgress;
+        this.pageCount = pageCount;
     }
 
     // Getters and setters for each attribute

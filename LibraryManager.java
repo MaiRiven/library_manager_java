@@ -60,7 +60,7 @@ public class LibraryManager {
         System.out.println("Matching book:");
         displayBookDetails(selectedBook);
 
-        System.out.print("Is this the book you want to update? Type 'yes' to update, 'no' to cancel: ");
+        System.out.print("Is this the book you want to update?(yes / no)");
         String confirmation = prompt.getStringInput();
 
         if (confirmation.equalsIgnoreCase("yes")) {
@@ -100,7 +100,7 @@ public class LibraryManager {
         List<Book> matchingBooks = dataManager.searchBooksByTitle(title);
 
         if (matchingBooks.isEmpty()) {
-            System.out.println("Book not found.");
+            System.out.println("No matches found.");
             return;
         }
 
@@ -115,8 +115,11 @@ public class LibraryManager {
             System.out.println("Enter the number of pages you have read: ");
             int pagesRead = prompt.getIntInput();
             int totalPages = bookToUpdate.getPageCount();
+            System.out.println(totalPages);
             double progressPercentage = ((double) pagesRead / totalPages) * 100;
             String newProgress = String.format("%.2f%%", progressPercentage);
+            System.out.println(newProgress);
+            bookToUpdate.setReadingProgress(newProgress);
             dataManager.updateReadingProgress(bookToUpdate, newProgress);
             System.out.println("Reading progress updated.");
             displayBookDetails(bookToUpdate);
@@ -126,46 +129,39 @@ public class LibraryManager {
     }
 
     public void leaveStarRating() {
-        displayLibrary();
         System.out.println("Enter the title of the book you want to rate: ");
         String title = prompt.getStringInput();
 
-        Book bookToUpdate = dataManager.searchBooksByTitle(title);
-        if (bookToUpdate != null) {
-            System.out.println("Is this the book you want to rate?");
-            displayBookDetails(bookToUpdate);
-            System.out.print("Type 'yes' to rate, 'no' to cancel: ");
-            String confirmation = prompt.getStringInput();
+        List<Book> matchingBooks = dataManager.searchBooksByTitle(title);
 
-            if (confirmation.equalsIgnoreCase("yes")) {
-                System.out.println("Select the star rating (1-5): ");
-                int rating = prompt.getIntInput();
+        if (matchingBooks.isEmpty()) {
+            System.out.println("No matches found.");
+            return;
+        }
 
-                if (rating >= 1 && rating <= 5) {
-                    String starRating = getStarRatingString(rating); // Implement this method
+        Book bookToUpdate = matchingBooks.get(0);
 
-                    dataManager.leaveStarRating(bookToUpdate, starRating);
-                    System.out.println("Star rating updated!");
-                    displayBookDetails(bookToUpdate);
-                } else {
-                    System.out.println("Invalid rating choice.");
-                }
+        displayBookDetails(bookToUpdate);
+
+        System.out.println("Is this the book you want to update? (yes/no)");
+        String confirmation = prompt.getStringInput();
+
+        if (confirmation.equalsIgnoreCase("yes")) {
+            System.out.println("Select the star rating (1-5): ");
+            int rating = prompt.getIntInput();
+
+            if (rating >= 1 && rating <= 5) {
+                String starRating = getStarRatingString(rating); // Implement this method
+
+                dataManager.leaveStarRating(bookToUpdate, starRating);
+                System.out.println("Star rating updated!");
+                displayBookDetails(bookToUpdate);
             } else {
-                System.out.println("Rating update cancelled.");
+                System.out.println("Invalid rating choice.");
             }
         } else {
-            System.out.println("Book not found.");
+            System.out.println("Rating update cancelled.");
         }
-    }
-
-    private Book findBookByTitle(String title) {
-        List<Book> library = dataManager.getLibrary();
-        for (Book book : library) {
-            if (book.getTitle().equalsIgnoreCase(title)) {
-                return book;
-            }
-        }
-        return null;
     }
 
     private void displayBookDetails(Book book) {
