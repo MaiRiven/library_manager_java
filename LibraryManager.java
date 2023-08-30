@@ -34,7 +34,6 @@ public class LibraryManager {
         if (results.isEmpty()) {
             System.out.println("No matches found. Go buy more books.");
         } else {
-            art.bookLineArt();
             System.out.printf("| %-40s | %-25s | %-12s | %-10s | %-4s| \n",
                     "Title", "Author", "Rating", "Status", "Progress");
             for (Book book : results) {
